@@ -16,13 +16,12 @@ So that <> I can have easy access to the good stuff
 
 ## Acceptance criteria
 
-- [ ] What happens when an entry is empty?
-- [ ] How should something behave?
-- [ ] What is the text of an alert?
+
 - [ ] When clicking the "HomeButton" the user is redirected to the main page.
 - [ ] In the upper Left Corner is a Profile-Picture or default Avatar displayed
 - [ ] the Lower half of the Profile page displays a list of Favorite Audio-files.
  - [ ] On the right next to the listItem should be the like button, on click files can be taken out of the favorite list aka Toggle.
+ - [ ] when clicked on the List item of Favorite-Tracks, one should be directed to the player with clicked audio file ready to play. (future function or sub Story)
 ## Tasks
 
 - [ ] make a profile page
