@@ -1,4 +1,5 @@
 import {nanoid} from 'nanoid';
+import {useSession, signIn, signOut, SessionProvider} from 'next-auth/react';
 import Head from 'next/head';
 import {useState} from 'react';
 
@@ -8,6 +9,8 @@ import useFetch from '../hooks/useFetch';
 import useStore from '../hooks/useStore';
 
 export default function HomePage() {
+	const {data: session} = useSession();
+
 	// Data
 	const {data, loading, error} = useFetch('/api/hello');
 
@@ -26,6 +29,8 @@ export default function HomePage() {
 				<title key="title">My Project</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Head>
+			{!session && <button onClick={() => signIn()}>Sign In with Github</button>}\
+			{session && <button onClick={() => signOut()}>Sing Out</button>}
 			<h1>Home</h1>
 			{loading && <div>Loading...</div>}
 			{error && <div>{error.message}</div>}
