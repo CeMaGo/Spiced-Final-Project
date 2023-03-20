@@ -11,7 +11,9 @@ import useStore from '../hooks/useStore';
 
 export default function HomePage() {
 	const {data: session} = useSession();
-
+	function handleSignOut() {
+		signOut();
+	  }
 	// Data
 	const {data, loading, error} = useFetch('/api/hello');
 

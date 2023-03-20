@@ -1,14 +1,25 @@
 import {SessionProvider} from 'next-auth/react';
 
-import {GlobalStyle} from '../styles';
+import '@/styles/global.css';
+// import {GlobalStyle} from '../styles';
 
-export default function App({Component, pageProps: {session, ...pageProps}}) {
+export default function App({Component, pageProps}) {
+	//   pageProps: { session, ...pageProps },
+	// })
 	return (
-		<>
-			<GlobalStyle />
-			<SessionProvider session={session}>
-				<Component {...pageProps} />
-			</SessionProvider>
-		</>
+		<SessionProvider session={pageProps.session}>
+			<Component {...pageProps} />;
+		</SessionProvider>
 	);
 }
+
+// export default function App({Component, pageProps: {session, ...pageProps}}) {
+// 	return (
+// 		<>
+// 			<GlobalStyle />
+// 			<SessionProvider session={session}>
+// 				<Component {...pageProps} />
+// 			</SessionProvider>
+// 		</>
+// 	);
+// }
