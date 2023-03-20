@@ -3,6 +3,7 @@ import {useSession, signIn, signOut, SessionProvider} from 'next-auth/react';
 import Head from 'next/head';
 import {useState} from 'react';
 
+import styles from '../../styles/Home.module.css';
 import Button from '../components/Button';
 import Layout from '../components/Layout';
 import useFetch from '../hooks/useFetch';

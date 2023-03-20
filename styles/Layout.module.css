@@ -1,0 +1,9 @@
+.imgStyle {
+	@apply bg-gradient-to-r from-blue-500 to-indigo-500 rounded-l-sm;
+	position: relative;
+	overtflow: hidden;
+}
+
+.cartoonImg {
+	background: url('/assets/img');
+}
